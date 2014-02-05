@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Configuration;
 
 namespace birthdaybumps
 {
@@ -18,7 +19,7 @@ namespace birthdaybumps
             this.SignInUrl = signInUrl;
             this.RedirectUri = redirectUri;
             this.FinalSignInUrl = this.SignInUrl + "?client_id=" + this.ClientId + "&redirect_uri="
-                + HttpUtility.UrlEncode("https" + "://" + HttpContext.Current.Request.Url.Authority + this.RedirectUri)
+                + HttpUtility.UrlEncode("https" + "://" + ConfigurationSettings.AppSettings["FacebookWebUrl"] + this.RedirectUri)
                 + "&scope=friends_birthday,friends_relationships";
         }
     }
