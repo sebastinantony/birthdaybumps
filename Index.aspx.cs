@@ -33,7 +33,7 @@ namespace birthdaybumps
                 {
                     lblCode.Text = Request.QueryString["code"].ToString();
                     WebHeaderCollection collection = new WebHeaderCollection();
-                    string redirectUrl = HttpContext.Current.Request.Url.Scheme
+                    string redirectUrl = "https"
                         + "://" + HttpContext.Current.Request.Url.Authority
                         + ConfigurationSettings.AppSettings["FacebookRedirectUrl"];
                     collection.Add("code", lblCode.Text);
