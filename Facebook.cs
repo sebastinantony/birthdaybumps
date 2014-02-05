@@ -18,7 +18,7 @@ namespace birthdaybumps
             this.SignInUrl = signInUrl;
             this.RedirectUri = redirectUri;
             this.FinalSignInUrl = this.SignInUrl + "?client_id=" + this.ClientId + "&redirect_uri="
-                + HttpUtility.UrlEncode(HttpContext.Current.Request.Url.Scheme + "://" + HttpContext.Current.Request.Url.Authority + this.RedirectUri)
+                + HttpUtility.UrlEncode("https" + "://" + HttpContext.Current.Request.Url.Authority + this.RedirectUri)
                 + "&scope=friends_birthday,friends_relationships";
         }
     }
