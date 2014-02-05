@@ -173,8 +173,8 @@ namespace birthdaybumps
 
 
 
-        public FacebookToken facebookToken { get; set; }
+        public birthdaybumps.FacebookToken facebookToken { get; set; }
 
-        public FacebookResult facebookResult { get; set; }
+        public birthdaybumps.FacebookResult facebookResult { get; set; }
     }
 }
