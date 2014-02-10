@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Configuration;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
@@ -139,42 +141,145 @@ namespace birthdaybumps
             WebHeaderCollection web = new WebHeaderCollection();
             string jsonOutput = GetWebResponse
                 (
-                    "https://graph.facebook.com/me?fields=id,name,friends.fields(about,birthday,email,gender,name,hometown,relationship_status)&access_token=" + Session["access_token"],
+                    "https://graph.facebook.com/me?fields=name,gender,email,birthday,picture,family.fields(name,gender,birthday,picture,relationship_status),friends.fields(name,gender,birthday,picture,relationship_status)&access_token=" + Session["access_token"],
                     web
                 );
 
-            facebookResult = FacebookResult.FromJson(jsonOutput);
+            result(jsonOutput);
+            Session["jsonOutput"] = jsonOutput;
 
-            GridView1.DataSource = from bday in facebookResult.friends.data
-                                   where (!string.IsNullOrEmpty(bday.birthday) && DateTime.Parse(bday.birthday).Day == DateTime.Now.Day
-                                   && DateTime.Parse(bday.birthday).Month == DateTime.Now.Month)
-                                   select bday;
-
-            GridView1.DataBind();
-
-            GridView2.DataSource = from single in facebookResult.friends.data
-                                   where single.relationship_status == "Single"
-                                   select single;
-            GridView2.DataBind();
-
-            GridView3.DataSource = from complicated in facebookResult.friends.data
-                                   where complicated.relationship_status == "It's complicated"
-                                   select complicated;
-            GridView3.DataBind();
-
-            GridView4.DataSource = from married in facebookResult.friends.data
-                                   where married.relationship_status == "Married"
-                                   select married;
-            GridView4.DataBind();
-
-            //lblResult.Text = jsonOutput;
-
+            BindGV();
         }
 
+        public void result(string jsonOutput)
+        {
+            facebookResult = FacebookResult.FromJson(jsonOutput);
+        }
 
+        public void BindGV()
+        {
+            BindGV1();
+            BindGV2();
+            BindGV3();
+            BindGV4();
+            BindGV5();
+            //BindGV6();
+        }
+
+        private void BindGV6()
+        {
+            var query = from bday in facebookResult.family.data
+                        where (!string.IsNullOrEmpty(bday.birthday) && DateTime.Parse(bday.birthday).Day == DateTime.Now.Day
+                                       && DateTime.Parse(bday.birthday).Month == DateTime.Now.Month)
+                        orderby bday.name
+                        select bday;
+            DataTable tb = FacebookHeper.ToDataTable<Datum2>(query.ToList());
+            GridView6.DataSource = tb;
+            GridView6.DataBind();
+        }
+
+        private void BindGV5()
+        {
+            var query = from upcomingBDay in facebookResult.friends.data
+                        where (!string.IsNullOrEmpty(upcomingBDay.birthday) && DateTime.Parse(upcomingBDay.birthday).Month >= DateTime.Now.Month)
+                        orderby upcomingBDay.name
+                        select upcomingBDay;
+            DataTable tb = FacebookHeper.ToDataTable<Datum>(query.ToList());
+            GridView5.DataSource = tb;
+            GridView5.DataBind();
+        }
+
+        public void BindGV4()
+        {
+            var query = from married in facebookResult.friends.data
+                        where married.relationship_status == "Married"
+                        orderby married.name
+                        select married;
+            DataTable tb = FacebookHeper.ToDataTable<Datum>(query.ToList());
+            GridView4.DataSource = tb;
+            GridView4.DataBind();
+        }
+
+        public void BindGV3()
+        {
+            var query = from complicated in facebookResult.friends.data
+                        where complicated.relationship_status == "It's complicated"
+                        orderby complicated.name
+                        select complicated;
+            DataTable tb = FacebookHeper.ToDataTable<Datum>(query.ToList());
+            GridView3.DataSource = tb;
+            GridView3.DataBind();
+        }
+
+        public void BindGV2()
+        {
+            var query = from single in facebookResult.friends.data
+                        where single.relationship_status == "Single"
+                        orderby single.name
+                        select single;
+            DataTable tb = FacebookHeper.ToDataTable<Datum>(query.ToList());
+            GridView2.DataSource = tb;
+            GridView2.DataBind();
+        }
+
+        public void BindGV1()
+        {
+            IEnumerable<Datum> query = from bday in facebookResult.friends.data.AsEnumerable()
+                                       where (!string.IsNullOrEmpty(bday.birthday) && DateTime.Parse(bday.birthday).Day == DateTime.Now.Day
+                                       && DateTime.Parse(bday.birthday).Month == DateTime.Now.Month)
+                                       orderby bday.name
+                                       select bday;
+            DataTable tb = FacebookHeper.ToDataTable<Datum>(query.ToList());
+            GridView1.DataSource = tb;
+
+            GridView1.DataBind();
+        }
 
         public birthdaybumps.FacebookToken facebookToken { get; set; }
 
         public birthdaybumps.FacebookResult facebookResult { get; set; }
+
+        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            result(Session["jsonOutput"].ToString());
+            GridView1.PageIndex = e.NewPageIndex;
+            this.BindGV1();
+        }
+
+        protected void GridView2_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            result(Session["jsonOutput"].ToString());
+            GridView2.PageIndex = e.NewPageIndex;
+            this.BindGV2();
+        }
+
+        protected void GridView3_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            result(Session["jsonOutput"].ToString());
+            GridView3.PageIndex = e.NewPageIndex;
+            this.BindGV3();
+        }
+
+        protected void GridView4_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            result(Session["jsonOutput"].ToString());
+            GridView4.PageIndex = e.NewPageIndex;
+            this.BindGV4();
+        }
+
+        protected void GridView5_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            result(Session["jsonOutput"].ToString());
+            GridView5.PageIndex = e.NewPageIndex;
+            this.BindGV5();
+        }
+
+        protected void GridView6_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            result(Session["jsonOutput"].ToString());
+            GridView6.PageIndex = e.NewPageIndex;
+            this.BindGV6();
+        }
     }
+
 }

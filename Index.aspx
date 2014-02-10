@@ -139,222 +139,73 @@
                             <h3>Todays Birthday
 					</h3>
                             <asp:GridView ID="GridView1" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
-                                AutoGenerateColumns="false">
+                                AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView1_PageIndexChanging"
+                                GridLines="None">
+<AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
                                 <Columns>
+
+                                    <asp:TemplateField>
+                                        <ItemTemplate>
+                                            <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+
                                     <asp:BoundField DataField="name" HeaderText="Name" />
                                     <asp:BoundField DataField="birthday" HeaderText="Birthday" />
                                     <asp:BoundField DataField="relationship_status" HeaderText="Status" />
                                 </Columns>
+
+<RowStyle CssClass="success"></RowStyle>
                             </asp:GridView>
-                            <ul class="pagination pagination-sm">
-                                <li>
-                                    <a href="#">Prev</a>
-                                </li>
-                                <li>
-                                    <a href="#">1</a>
-                                </li>
-                                <li>
-                                    <a href="#">2</a>
-                                </li>
-                                <li>
-                                    <a href="#">3</a>
-                                </li>
-                                <li>
-                                    <a href="#">4</a>
-                                </li>
-                                <li>
-                                    <a href="#">5</a>
-                                </li>
-                                <li>
-                                    <a href="#">Next</a>
-                                </li>
-                            </ul>
+                            
                         </div>
                         <div class="col-md-4 column">
                             <h3>Up Coming Birthday
 					</h3>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>#
-								</th>
-                                        <th>Product
-								</th>
-                                        <th>Payment Taken
-								</th>
-                                        <th>Status
-								</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1
-								</td>
-                                        <td>TB - Monthly
-								</td>
-                                        <td>01/04/2012
-								</td>
-                                        <td>Default
-								</td>
-                                    </tr>
-                                    <tr class="active">
-                                        <td>1
-								</td>
-                                        <td>TB - Monthly
-								</td>
-                                        <td>01/04/2012
-								</td>
-                                        <td>Approved
-								</td>
-                                    </tr>
-                                    <tr class="success">
-                                        <td>2
-								</td>
-                                        <td>TB - Monthly
-								</td>
-                                        <td>02/04/2012
-								</td>
-                                        <td>Declined
-								</td>
-                                    </tr>
-                                    <tr class="warning">
-                                        <td>3
-								</td>
-                                        <td>TB - Monthly
-								</td>
-                                        <td>03/04/2012
-								</td>
-                                        <td>Pending
-								</td>
-                                    </tr>
-                                    <tr class="danger">
-                                        <td>4
-								</td>
-                                        <td>TB - Monthly
-								</td>
-                                        <td>04/04/2012
-								</td>
-                                        <td>Call in to confirm
-								</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <ul class="pagination pagination-sm">
-                                <li>
-                                    <a href="#">Prev</a>
-                                </li>
-                                <li>
-                                    <a href="#">1</a>
-                                </li>
-                                <li>
-                                    <a href="#">2</a>
-                                </li>
-                                <li>
-                                    <a href="#">3</a>
-                                </li>
-                                <li>
-                                    <a href="#">4</a>
-                                </li>
-                                <li>
-                                    <a href="#">5</a>
-                                </li>
-                                <li>
-                                    <a href="#">Next</a>
-                                </li>
-                            </ul>
+                            <asp:GridView ID="GridView5" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
+                                AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView5_PageIndexChanging"
+                                GridLines="None">
+<AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
+                                <Columns>
+
+                                    <asp:TemplateField>
+                                        <ItemTemplate>
+                                            <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+
+                                    <asp:BoundField DataField="name" HeaderText="Name" />
+                                    <asp:BoundField DataField="birthday" HeaderText="Birthday" />
+                                    <asp:BoundField DataField="relationship_status" HeaderText="Status" />
+                                </Columns>
+
+<RowStyle CssClass="success"></RowStyle>
+                            </asp:GridView>
+                            
                         </div>
                         <div class="col-md-4 column">
                             <h3>Favorite birthday
 					</h3>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>#
-								</th>
-                                        <th>Product
-								</th>
-                                        <th>Payment Taken
-								</th>
-                                        <th>Status
-								</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1
-								</td>
-                                        <td>TB - Monthly
-								</td>
-                                        <td>01/04/2012
-								</td>
-                                        <td>Default
-								</td>
-                                    </tr>
-                                    <tr class="active">
-                                        <td>1
-								</td>
-                                        <td>TB - Monthly
-								</td>
-                                        <td>01/04/2012
-								</td>
-                                        <td>Approved
-								</td>
-                                    </tr>
-                                    <tr class="success">
-                                        <td>2
-								</td>
-                                        <td>TB - Monthly
-								</td>
-                                        <td>02/04/2012
-								</td>
-                                        <td>Declined
-								</td>
-                                    </tr>
-                                    <tr class="warning">
-                                        <td>3
-								</td>
-                                        <td>TB - Monthly
-								</td>
-                                        <td>03/04/2012
-								</td>
-                                        <td>Pending
-								</td>
-                                    </tr>
-                                    <tr class="danger">
-                                        <td>4
-								</td>
-                                        <td>TB - Monthly
-								</td>
-                                        <td>04/04/2012
-								</td>
-                                        <td>Call in to confirm
-								</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <ul class="pagination pagination-sm">
-                                <li>
-                                    <a href="#">Prev</a>
-                                </li>
-                                <li>
-                                    <a href="#">1</a>
-                                </li>
-                                <li>
-                                    <a href="#">2</a>
-                                </li>
-                                <li>
-                                    <a href="#">3</a>
-                                </li>
-                                <li>
-                                    <a href="#">4</a>
-                                </li>
-                                <li>
-                                    <a href="#">5</a>
-                                </li>
-                                <li>
-                                    <a href="#">Next</a>
-                                </li>
-                            </ul>
+                            <asp:GridView ID="GridView6" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
+                                AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView6_PageIndexChanging"
+                                GridLines="None">
+<AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
+                                <Columns>
+
+                                    <asp:TemplateField>
+                                        <ItemTemplate>
+                                            <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+
+                                    <asp:BoundField DataField="name" HeaderText="Name" />
+                                    <asp:BoundField DataField="birthday" HeaderText="Birthday" />
+                                    <asp:BoundField DataField="relationship_status" HeaderText="Status" />
+                                </Columns>
+
+<RowStyle CssClass="success"></RowStyle>
+                            </asp:GridView>
+                            
                         </div>
                     </div>
                 </div>
@@ -372,82 +223,65 @@
                             <h3>Single - Ready to Mingle :)
 					</h3>
                             <asp:GridView ID="GridView2" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
-                                AutoGenerateColumns="false">
+                                AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView2_PageIndexChanging"
+                                GridLines="None">
+<AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
                                 <Columns>
+                                    <asp:TemplateField>
+                                        <ItemTemplate>
+                                            <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
                                     <asp:BoundField DataField="name" HeaderText="Name" />
                                     <asp:BoundField DataField="birthday" HeaderText="Birthday" />
                                     <asp:BoundField DataField="relationship_status" HeaderText="Status" />
                                 </Columns>
+
+<RowStyle CssClass="success"></RowStyle>
                             </asp:GridView>
-                            <ul class="pagination pagination-sm">
-                                <li>
-                                    <a href="#">Prev</a>
-                                </li>
-                                <li>
-                                    <a href="#">1</a>
-                                </li>
-                                <li>
-                                    <a href="#">2</a>
-                                </li>
-                                <li>
-                                    <a href="#">3</a>
-                                </li>
-                                <li>
-                                    <a href="#">4</a>
-                                </li>
-                                <li>
-                                    <a href="#">5</a>
-                                </li>
-                                <li>
-                                    <a href="#">Next</a>
-                                </li>
-                            </ul>
+                            
                         </div>
                         <div class="col-md-4 column">
                             <h3>It's complicated - They have found there own pit 
 					</h3>
                             <asp:GridView ID="GridView3" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
-                                AutoGenerateColumns="false">
+                                AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView3_PageIndexChanging"
+                                GridLines="None">
+<AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
                                 <Columns>
+                                    <asp:TemplateField>
+                                        <ItemTemplate>
+                                            <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
                                     <asp:BoundField DataField="name" HeaderText="Name" />
                                     <asp:BoundField DataField="birthday" HeaderText="Birthday" />
                                     <asp:BoundField DataField="relationship_status" HeaderText="Status" />
                                 </Columns>
+
+<RowStyle CssClass="success"></RowStyle>
                             </asp:GridView>
-                            <ul class="pagination pagination-sm">
-                                <li>
-                                    <a href="#">Prev</a>
-                                </li>
-                                <li>
-                                    <a href="#">1</a>
-                                </li>
-                                <li>
-                                    <a href="#">2</a>
-                                </li>
-                                <li>
-                                    <a href="#">3</a>
-                                </li>
-                                <li>
-                                    <a href="#">4</a>
-                                </li>
-                                <li>
-                                    <a href="#">5</a>
-                                </li>
-                                <li>
-                                    <a href="#">Next</a>
-                                </li>
-                            </ul>
+                            
                         </div>
                         <div class="col-md-4 column">
                             <h3>Married - Never look into these list (Danger)
                     </h3>
-                            <asp:GridView ID="GridView4" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
-                                AutoGenerateColumns="false">
+                            <asp:GridView ID="GridView4" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success" 
+                                AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView4_PageIndexChanging"
+                                AutoGenerateColumns="false" GridLines="None">
+<AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
                                 <Columns>
+                                    <asp:TemplateField>
+                                        <ItemTemplate>
+                                            <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
                                     <asp:BoundField DataField="name" HeaderText="Name" />
                                     <asp:BoundField DataField="birthday" HeaderText="Birthday" />
                                     <asp:BoundField DataField="relationship_status" HeaderText="Status" />
                                 </Columns>
+
+<RowStyle CssClass="success"></RowStyle>
                             </asp:GridView>
                         </div>
 
@@ -465,7 +299,7 @@
 					</h2>
                             <p>
                                 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-				
+
                             </p>
                             <p>
                                 <a class="btn" href="#">View details »</a>
@@ -477,7 +311,7 @@
 						</h1>
                                 <p>
                                     This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
-					
+
                                 </p>
                                 <p>
                                     <a class="btn btn-primary btn-large" href="#">Learn more</a>
