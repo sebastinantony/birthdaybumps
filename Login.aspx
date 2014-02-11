@@ -178,8 +178,8 @@
             </div>
 
             <footer>
-                <p class="pull-left">&copy; <a href="#" target="_blank">Arun Antony </a> 2014</p>
-                <p class="pull-right">Powered by: <a href="#">Arun Antony</a></p>
+                <p class="pull-left">&copy; <a href="https://www.facebook.com/arun.antony.9655" target="_blank">Arun Antony </a> 2014</p>
+                <p class="pull-right">Powered by: <a href="https://www.facebook.com/arun.antony.9655">Arun Antony</a></p>
             </footer>
 
         </div>
