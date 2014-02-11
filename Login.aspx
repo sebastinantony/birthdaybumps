@@ -61,7 +61,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="index.html">
+                    <a class="brand" href="Login.aspx">
                         <img alt="Charisma Logo" src="img/logo20.png" />
                         <span>BirthdayBumps</span></a>
 
@@ -179,7 +179,7 @@
 
             <footer>
                 <p class="pull-left">&copy; <a href="https://www.facebook.com/arun.antony.9655" target="_blank">Arun Antony </a> 2014</p>
-                <p class="pull-right">Powered by: <a href="https://www.facebook.com/arun.antony.9655">Arun Antony</a></p>
+                <p class="pull-right">Powered by: <a href="https://appharbor.com/">AppHarbor</a></p>
             </footer>
 
         </div>
