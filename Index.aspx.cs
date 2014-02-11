@@ -175,6 +175,79 @@ namespace birthdaybumps
             BindGV4();
             BindGV5();
             //BindGV6();
+            BindGV7();
+            BindGV8();
+            BindGV9();
+            BindGV10();
+            BindGV11();
+            BindGV12();
+
+        }
+
+        private void BindGV12()
+        {
+            var query = from widowed in facebookResult.friends.data
+                        where widowed.relationship_status == "Widowed"
+                        orderby widowed.name
+                        select widowed;
+            DataTable tb = FacebookHeper.ToDataTable<Datum>(query.ToList());
+            GridView12.DataSource = tb;
+            GridView12.DataBind();
+        }
+
+        private void BindGV11()
+        {
+            var query = from divorced in facebookResult.friends.data
+                        where divorced.relationship_status == "Divorced"
+                        orderby divorced.name
+                        select divorced;
+            DataTable tb = FacebookHeper.ToDataTable<Datum>(query.ToList());
+            GridView11.DataSource = tb;
+            GridView11.DataBind();
+        }
+
+        private void BindGV10()
+        {
+            var query = from separated in facebookResult.friends.data
+                        where separated.relationship_status == "Separated"
+                        orderby separated.name
+                        select separated;
+            DataTable tb = FacebookHeper.ToDataTable<Datum>(query.ToList());
+            GridView10.DataSource = tb;
+            GridView10.DataBind();
+        }
+
+        private void BindGV9()
+        {
+            var query = from open in facebookResult.friends.data
+                        where open.relationship_status == "In an open relationship"
+                        orderby open.name
+                        select open;
+            DataTable tb = FacebookHeper.ToDataTable<Datum>(query.ToList());
+            GridView9.DataSource = tb;
+            GridView9.DataBind();
+        }
+
+        private void BindGV8()
+        {
+            var query = from engaged in facebookResult.friends.data
+                        where engaged.relationship_status == "Engaged"
+                        orderby engaged.name
+                        select engaged;
+            DataTable tb = FacebookHeper.ToDataTable<Datum>(query.ToList());
+            GridView8.DataSource = tb;
+            GridView8.DataBind();
+        }
+
+        private void BindGV7()
+        {
+            var query = from relationship in facebookResult.friends.data
+                        where relationship.relationship_status == "In a relationship"
+                        orderby relationship.name
+                        select relationship;
+            DataTable tb = FacebookHeper.ToDataTable<Datum>(query.ToList());
+            GridView7.DataSource = tb;
+            GridView7.DataBind();
         }
 
         private void BindGV6()
@@ -290,6 +363,48 @@ namespace birthdaybumps
             result(Session["jsonOutput"].ToString());
             GridView6.PageIndex = e.NewPageIndex;
             this.BindGV6();
+        }
+
+        protected void GridView7_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            result(Session["jsonOutput"].ToString());
+            GridView7.PageIndex = e.NewPageIndex;
+            this.BindGV7();
+        }
+
+        protected void GridView8_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            result(Session["jsonOutput"].ToString());
+            GridView8.PageIndex = e.NewPageIndex;
+            this.BindGV8();
+        }
+
+        protected void GridView9_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            result(Session["jsonOutput"].ToString());
+            GridView9.PageIndex = e.NewPageIndex;
+            this.BindGV9();
+        }
+
+        protected void GridView10_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            result(Session["jsonOutput"].ToString());
+            GridView10.PageIndex = e.NewPageIndex;
+            this.BindGV10();
+        }
+
+        protected void GridView11_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            result(Session["jsonOutput"].ToString());
+            GridView11.PageIndex = e.NewPageIndex;
+            this.BindGV11();
+        }
+
+        protected void GridView12_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            result(Session["jsonOutput"].ToString());
+            GridView12.PageIndex = e.NewPageIndex;
+            this.BindGV12();
         }
 
         protected void btnFBFriends_Click(object sender, EventArgs e)

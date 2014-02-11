@@ -118,7 +118,7 @@
             <div class="row-fluid">
 
                 <!-- left menu starts -->
-                
+
                 <!--/span-->
                 <!-- left menu ends -->
 
@@ -187,18 +187,7 @@
 
                                     <RowStyle CssClass="success"></RowStyle>
                                 </asp:GridView>
-                                <div class="pagination pagination-centered">
-                                    <ul>
-                                        <li><a href="#">Prev</a></li>
-                                        <li class="active">
-                                            <a href="#">1</a>
-                                        </li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">Next</a></li>
-                                    </ul>
-                                </div>
+
                             </div>
                         </div>
                         <!--/span-->
@@ -232,7 +221,7 @@
 
                                     <RowStyle CssClass="success"></RowStyle>
                                 </asp:GridView>
-                                <div class="pagination pagination-centered">
+                                <%--<div class="pagination pagination-centered">
                                     <ul>
                                         <li><a href="#">Prev</a></li>
                                         <li class="active">
@@ -243,7 +232,7 @@
                                         <li><a href="#">4</a></li>
                                         <li><a href="#">Next</a></li>
                                     </ul>
-                                </div>
+                                </div>--%>
                             </div>
                         </div>
                     </div>
@@ -279,7 +268,7 @@
 
                                     <RowStyle CssClass="success"></RowStyle>
                                 </asp:GridView>
-                                <div class="pagination pagination-centered">
+                                <%--<div class="pagination pagination-centered">
                                     <ul>
                                         <li><a href="#">Prev</a></li>
                                         <li class="active">
@@ -290,7 +279,7 @@
                                         <li><a href="#">4</a></li>
                                         <li><a href="#">Next</a></li>
                                     </ul>
-                                </div>
+                                </div>--%>
                             </div>
                         </div>
 
@@ -321,7 +310,7 @@
 
                                     <RowStyle CssClass="success"></RowStyle>
                                 </asp:GridView>
-                                <div class="pagination pagination-centered">
+                                <%--<div class="pagination pagination-centered">
                                     <ul>
                                         <li><a href="#">Prev</a></li>
                                         <li class="active">
@@ -332,7 +321,7 @@
                                         <li><a href="#">4</a></li>
                                         <li><a href="#">Next</a></li>
                                     </ul>
-                                </div>
+                                </div>--%>
                             </div>
                         </div>
                     </div>
@@ -366,7 +355,7 @@
 
                                     <RowStyle CssClass="success"></RowStyle>
                                 </asp:GridView>
-                                <div class="pagination pagination-centered">
+                                <%--<div class="pagination pagination-centered">
                                     <ul>
                                         <li><a href="#">Prev</a></li>
                                         <li class="active">
@@ -377,7 +366,7 @@
                                         <li><a href="#">4</a></li>
                                         <li><a href="#">Next</a></li>
                                     </ul>
-                                </div>
+                                </div>--%>
                             </div>
                         </div>
 
@@ -408,7 +397,7 @@
 
                                     <RowStyle CssClass="success"></RowStyle>
                                 </asp:GridView>
-                                <div class="pagination pagination-centered">
+                                <%--<div class="pagination pagination-centered">
                                     <ul>
                                         <li><a href="#">Prev</a></li>
                                         <li class="active">
@@ -419,7 +408,268 @@
                                         <li><a href="#">4</a></li>
                                         <li><a href="#">Next</a></li>
                                     </ul>
+                                </div>--%>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/row-->
+
+                    <div class="row-fluid sortable">
+                        <div class="box span6">
+                            <div class="box-header well" data-original-title>
+                                <h2>In a relationship</h2>
+                                <div class="box-icon">
+                                    <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+                                    <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+                                    <a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
                                 </div>
+                            </div>
+                            <div class="box-content">
+                                <asp:GridView ID="GridView7" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
+                                    AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView7_PageIndexChanging"
+                                    GridLines="None">
+                                    <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
+                                    <Columns>
+                                        <asp:TemplateField>
+                                            <ItemTemplate>
+                                                <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:BoundField DataField="name" HeaderText="Name" />
+                                        <asp:BoundField DataField="birthday" HeaderText="Birthday" />
+                                        <asp:BoundField DataField="relationship_status" HeaderText="Status" />
+                                    </Columns>
+
+                                    <RowStyle CssClass="success"></RowStyle>
+                                </asp:GridView>
+                                <%--<div class="pagination pagination-centered">
+                                    <ul>
+                                        <li><a href="#">Prev</a></li>
+                                        <li class="active">
+                                            <a href="#">1</a>
+                                        </li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">Next</a></li>
+                                    </ul>
+                                </div>--%>
+                            </div>
+                        </div>
+
+                        <div class="box span6">
+                            <div class="box-header well" data-original-title>
+                                <h2>Engaged</h2>
+                                <div class="box-icon">
+                                    <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+                                    <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+                                    <a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+                                </div>
+                            </div>
+                            <div class="box-content">
+                                <asp:GridView ID="GridView8" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
+                                    AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView8_PageIndexChanging"
+                                    AutoGenerateColumns="false" GridLines="None">
+                                    <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
+                                    <Columns>
+                                        <asp:TemplateField>
+                                            <ItemTemplate>
+                                                <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:BoundField DataField="name" HeaderText="Name" />
+                                        <asp:BoundField DataField="birthday" HeaderText="Birthday" />
+                                        <asp:BoundField DataField="relationship_status" HeaderText="Status" />
+                                    </Columns>
+
+                                    <RowStyle CssClass="success"></RowStyle>
+                                </asp:GridView>
+                                <%--<div class="pagination pagination-centered">
+                                    <ul>
+                                        <li><a href="#">Prev</a></li>
+                                        <li class="active">
+                                            <a href="#">1</a>
+                                        </li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">Next</a></li>
+                                    </ul>
+                                </div>--%>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/row-->
+
+                    <div class="row-fluid sortable">
+                        <div class="box span6">
+                            <div class="box-header well" data-original-title>
+                                <h2>In an open relationship</h2>
+                                <div class="box-icon">
+                                    <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+                                    <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+                                    <a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+                                </div>
+                            </div>
+                            <div class="box-content">
+                                <asp:GridView ID="GridView9" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
+                                    AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView9_PageIndexChanging"
+                                    GridLines="None">
+                                    <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
+                                    <Columns>
+                                        <asp:TemplateField>
+                                            <ItemTemplate>
+                                                <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:BoundField DataField="name" HeaderText="Name" />
+                                        <asp:BoundField DataField="birthday" HeaderText="Birthday" />
+                                        <asp:BoundField DataField="relationship_status" HeaderText="Status" />
+                                    </Columns>
+
+                                    <RowStyle CssClass="success"></RowStyle>
+                                </asp:GridView>
+                                <%--<div class="pagination pagination-centered">
+                                    <ul>
+                                        <li><a href="#">Prev</a></li>
+                                        <li class="active">
+                                            <a href="#">1</a>
+                                        </li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">Next</a></li>
+                                    </ul>
+                                </div>--%>
+                            </div>
+                        </div>
+
+                        <div class="box span6">
+                            <div class="box-header well" data-original-title>
+                                <h2>Separated</h2>
+                                <div class="box-icon">
+                                    <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+                                    <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+                                    <a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+                                </div>
+                            </div>
+                            <div class="box-content">
+                                <asp:GridView ID="GridView10" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
+                                    AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView10_PageIndexChanging"
+                                    AutoGenerateColumns="false" GridLines="None">
+                                    <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
+                                    <Columns>
+                                        <asp:TemplateField>
+                                            <ItemTemplate>
+                                                <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:BoundField DataField="name" HeaderText="Name" />
+                                        <asp:BoundField DataField="birthday" HeaderText="Birthday" />
+                                        <asp:BoundField DataField="relationship_status" HeaderText="Status" />
+                                    </Columns>
+
+                                    <RowStyle CssClass="success"></RowStyle>
+                                </asp:GridView>
+                                <%--<div class="pagination pagination-centered">
+                                    <ul>
+                                        <li><a href="#">Prev</a></li>
+                                        <li class="active">
+                                            <a href="#">1</a>
+                                        </li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">Next</a></li>
+                                    </ul>
+                                </div>--%>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/row-->
+
+                    <div class="row-fluid sortable">
+                        <div class="box span6">
+                            <div class="box-header well" data-original-title>
+                                <h2>Divorced</h2>
+                                <div class="box-icon">
+                                    <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+                                    <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+                                    <a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+                                </div>
+                            </div>
+                            <div class="box-content">
+                                <asp:GridView ID="GridView11" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
+                                    AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView11_PageIndexChanging"
+                                    GridLines="None">
+                                    <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
+                                    <Columns>
+                                        <asp:TemplateField>
+                                            <ItemTemplate>
+                                                <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:BoundField DataField="name" HeaderText="Name" />
+                                        <asp:BoundField DataField="birthday" HeaderText="Birthday" />
+                                        <asp:BoundField DataField="relationship_status" HeaderText="Status" />
+                                    </Columns>
+
+                                    <RowStyle CssClass="success"></RowStyle>
+                                </asp:GridView>
+                                <%--<div class="pagination pagination-centered">
+                                    <ul>
+                                        <li><a href="#">Prev</a></li>
+                                        <li class="active">
+                                            <a href="#">1</a>
+                                        </li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">Next</a></li>
+                                    </ul>
+                                </div>--%>
+                            </div>
+                        </div>
+
+                        <div class="box span6">
+                            <div class="box-header well" data-original-title>
+                                <h2>Widowed</h2>
+                                <div class="box-icon">
+                                    <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+                                    <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+                                    <a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+                                </div>
+                            </div>
+                            <div class="box-content">
+                                <asp:GridView ID="GridView12" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
+                                    AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView12_PageIndexChanging"
+                                    AutoGenerateColumns="false" GridLines="None">
+                                    <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
+                                    <Columns>
+                                        <asp:TemplateField>
+                                            <ItemTemplate>
+                                                <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:BoundField DataField="name" HeaderText="Name" />
+                                        <asp:BoundField DataField="birthday" HeaderText="Birthday" />
+                                        <asp:BoundField DataField="relationship_status" HeaderText="Status" />
+                                    </Columns>
+
+                                    <RowStyle CssClass="success"></RowStyle>
+                                </asp:GridView>
+                                <%--<div class="pagination pagination-centered">
+                                    <ul>
+                                        <li><a href="#">Prev</a></li>
+                                        <li class="active">
+                                            <a href="#">1</a>
+                                        </li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">Next</a></li>
+                                    </ul>
+                                </div>--%>
                             </div>
                         </div>
                     </div>
