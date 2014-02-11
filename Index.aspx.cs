@@ -58,6 +58,17 @@ namespace birthdaybumps
                     string access = tokens.Split('=')[1];
                     //facebookToken = FacebookToken.FromJson(accessToken);
                     Session["access_token"] = access;
+                    WebHeaderCollection web = new WebHeaderCollection();
+                    string jsonOutput = GetWebResponse
+                        (
+                            "https://graph.facebook.com/me?fields=name,gender,email,birthday,picture,family.fields(name,gender,birthday,picture,relationship_status),friends.fields(name,gender,birthday,picture,relationship_status)&access_token=" + Session["access_token"],
+                            web
+                        );
+
+                    result(jsonOutput);
+                    Session["jsonOutput"] = jsonOutput;
+
+                    BindGV();
                 }
             }
         }
@@ -280,6 +291,13 @@ namespace birthdaybumps
             GridView6.PageIndex = e.NewPageIndex;
             this.BindGV6();
         }
+
+        protected void btnFBFriends_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        
     }
 
 }

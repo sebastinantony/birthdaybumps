@@ -15,7 +15,7 @@ namespace birthdaybumps
 
         }
 
-        protected void btnFriends_Click(object sender, EventArgs e)
+        protected void btnFBFriends_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(Request.QueryString["code"]))
             {
@@ -26,6 +26,7 @@ namespace birthdaybumps
 
                 Response.Redirect(fb.FinalSignInUrl);
             }
+
         }
     }
 }
