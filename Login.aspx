@@ -86,7 +86,7 @@
                     <!-- theme selector ends -->
 
                     <!-- user dropdown starts -->
-                    <div class="btn-group pull-right">
+                    <%--<div class="btn-group pull-right">
                         <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
                             <i class="icon-user"></i><span class="hidden-phone">admin</span>
                             <span class="caret"></span>
@@ -96,7 +96,7 @@
                             <li class="divider"></li>
                             <li><a href="login.html">Logout</a></li>
                         </ul>
-                    </div>
+                    </div>--%>
                     <!-- user dropdown ends -->
 
                     <%--<div class="top-nav nav-collapse">
