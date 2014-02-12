@@ -47,6 +47,18 @@
 
     <!-- The fav icon -->
     <link rel="shortcut icon" href="img/favicon.ico">
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-41062683-3', 'apphb.com');
+        ga('send', 'pageview');
+
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -168,6 +180,9 @@
                                 </div>
                             </div>
                             <div class="box-content">
+                                <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                                <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Always">
+                                <ContentTemplate>
                                 <asp:GridView ID="GridView1" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
                                     AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView1_PageIndexChanging"
                                     GridLines="None">
@@ -187,6 +202,8 @@
 
                                     <RowStyle CssClass="success"></RowStyle>
                                 </asp:GridView>
+                                    </ContentTemplate>                                
+                                    </asp:UpdatePanel>
 
                             </div>
                         </div>
@@ -202,6 +219,8 @@
                                 </div>
                             </div>
                             <div class="box-content">
+                                <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Always">
+                                <ContentTemplate>                                     
                                 <asp:GridView ID="GridView5" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
                                     AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView5_PageIndexChanging"
                                     GridLines="None">
@@ -221,6 +240,8 @@
 
                                     <RowStyle CssClass="success"></RowStyle>
                                 </asp:GridView>
+                                    </ContentTemplate>
+                                    </asp:UpdatePanel>
                                 <%--<div class="pagination pagination-centered">
                                     <ul>
                                         <li><a href="#">Prev</a></li>
@@ -249,6 +270,8 @@
                                 </div>
                             </div>
                             <div class="box-content">
+                                <asp:UpdatePanel ID="UpdatePanel3" runat="server" UpdateMode="Always">
+                                <ContentTemplate> 
                                 <asp:GridView ID="GridView6" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
                                     AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView6_PageIndexChanging"
                                     GridLines="None">
@@ -268,6 +291,8 @@
 
                                     <RowStyle CssClass="success"></RowStyle>
                                 </asp:GridView>
+                                    </ContentTemplate>
+                                    </asp:UpdatePanel>
                                 <%--<div class="pagination pagination-centered">
                                     <ul>
                                         <li><a href="#">Prev</a></li>
@@ -293,6 +318,8 @@
                                 </div>
                             </div>
                             <div class="box-content">
+                                <asp:UpdatePanel ID="UpdatePanel4" runat="server" UpdateMode="Always">
+                                <ContentTemplate> 
                                 <asp:GridView ID="GridView2" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
                                     AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView2_PageIndexChanging"
                                     GridLines="None">
@@ -310,6 +337,8 @@
 
                                     <RowStyle CssClass="success"></RowStyle>
                                 </asp:GridView>
+                                    </ContentTemplate>
+                                    </asp:UpdatePanel>
                                 <%--<div class="pagination pagination-centered">
                                     <ul>
                                         <li><a href="#">Prev</a></li>
@@ -338,6 +367,8 @@
                                 </div>
                             </div>
                             <div class="box-content">
+                                <asp:UpdatePanel ID="UpdatePanel5" runat="server" UpdateMode="Always">
+                                <ContentTemplate> 
                                 <asp:GridView ID="GridView3" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
                                     AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView3_PageIndexChanging"
                                     GridLines="None">
@@ -355,6 +386,8 @@
 
                                     <RowStyle CssClass="success"></RowStyle>
                                 </asp:GridView>
+                                    </ContentTemplate>
+                                    </asp:UpdatePanel>
                                 <%--<div class="pagination pagination-centered">
                                     <ul>
                                         <li><a href="#">Prev</a></li>
@@ -380,6 +413,8 @@
                                 </div>
                             </div>
                             <div class="box-content">
+                                <asp:UpdatePanel ID="UpdatePanel6" runat="server" UpdateMode="Always">
+                                <ContentTemplate> 
                                 <asp:GridView ID="GridView4" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
                                     AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView4_PageIndexChanging"
                                     AutoGenerateColumns="false" GridLines="None">
@@ -397,6 +432,8 @@
 
                                     <RowStyle CssClass="success"></RowStyle>
                                 </asp:GridView>
+                                    </ContentTemplate>
+                                    </asp:UpdatePanel>
                                 <%--<div class="pagination pagination-centered">
                                     <ul>
                                         <li><a href="#">Prev</a></li>
@@ -425,6 +462,8 @@
                                 </div>
                             </div>
                             <div class="box-content">
+                               <asp:UpdatePanel ID="UpdatePanel7" runat="server" UpdateMode="Always">
+                                <ContentTemplate> 
                                 <asp:GridView ID="GridView7" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
                                     AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView7_PageIndexChanging"
                                     GridLines="None">
@@ -442,6 +481,8 @@
 
                                     <RowStyle CssClass="success"></RowStyle>
                                 </asp:GridView>
+                                    </ContentTemplate>
+                                   </asp:UpdatePanel>
                                 <%--<div class="pagination pagination-centered">
                                     <ul>
                                         <li><a href="#">Prev</a></li>
@@ -467,6 +508,8 @@
                                 </div>
                             </div>
                             <div class="box-content">
+                                <asp:UpdatePanel ID="UpdatePanel8" runat="server" UpdateMode="Always">
+                                <ContentTemplate> 
                                 <asp:GridView ID="GridView8" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
                                     AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView8_PageIndexChanging"
                                     AutoGenerateColumns="false" GridLines="None">
@@ -484,6 +527,8 @@
 
                                     <RowStyle CssClass="success"></RowStyle>
                                 </asp:GridView>
+                                    </ContentTemplate>
+                                    </asp:UpdatePanel>
                                 <%--<div class="pagination pagination-centered">
                                     <ul>
                                         <li><a href="#">Prev</a></li>
@@ -512,6 +557,8 @@
                                 </div>
                             </div>
                             <div class="box-content">
+                                <asp:UpdatePanel ID="UpdatePanel9" runat="server" UpdateMode="Always">
+                                <ContentTemplate> 
                                 <asp:GridView ID="GridView9" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
                                     AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView9_PageIndexChanging"
                                     GridLines="None">
@@ -529,6 +576,8 @@
 
                                     <RowStyle CssClass="success"></RowStyle>
                                 </asp:GridView>
+                                    </ContentTemplate>
+                                    </asp:UpdatePanel>
                                 <%--<div class="pagination pagination-centered">
                                     <ul>
                                         <li><a href="#">Prev</a></li>
@@ -554,6 +603,8 @@
                                 </div>
                             </div>
                             <div class="box-content">
+                                <asp:UpdatePanel ID="UpdatePanel10" runat="server" UpdateMode="Always">
+                                <ContentTemplate> 
                                 <asp:GridView ID="GridView10" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
                                     AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView10_PageIndexChanging"
                                     AutoGenerateColumns="false" GridLines="None">
@@ -571,6 +622,8 @@
 
                                     <RowStyle CssClass="success"></RowStyle>
                                 </asp:GridView>
+                                    </ContentTemplate>
+                                    </asp:UpdatePanel>
                                 <%--<div class="pagination pagination-centered">
                                     <ul>
                                         <li><a href="#">Prev</a></li>
@@ -599,6 +652,8 @@
                                 </div>
                             </div>
                             <div class="box-content">
+                                <asp:UpdatePanel ID="UpdatePanel11" runat="server" UpdateMode="Always">
+                                <ContentTemplate> 
                                 <asp:GridView ID="GridView11" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
                                     AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView11_PageIndexChanging"
                                     GridLines="None">
@@ -616,6 +671,8 @@
 
                                     <RowStyle CssClass="success"></RowStyle>
                                 </asp:GridView>
+                                    </ContentTemplate>
+                                    </asp:UpdatePanel>
                                 <%--<div class="pagination pagination-centered">
                                     <ul>
                                         <li><a href="#">Prev</a></li>
@@ -641,6 +698,8 @@
                                 </div>
                             </div>
                             <div class="box-content">
+                                <asp:UpdatePanel ID="UpdatePanel12" runat="server" UpdateMode="Always">
+                                <ContentTemplate> 
                                 <asp:GridView ID="GridView12" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
                                     AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView12_PageIndexChanging"
                                     AutoGenerateColumns="false" GridLines="None">
@@ -658,6 +717,8 @@
 
                                     <RowStyle CssClass="success"></RowStyle>
                                 </asp:GridView>
+                                    </ContentTemplate>
+                                    </asp:UpdatePanel>
                                 <%--<div class="pagination pagination-centered">
                                     <ul>
                                         <li><a href="#">Prev</a></li>
