@@ -172,7 +172,7 @@
 
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>Today's Birthday</h2>
+                                <h2>Today's Birthday <asp:Label ID="Label1" runat="server" Text="" /></asp:Label></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
                                     <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -211,7 +211,7 @@
 
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>Upcoming Bithday</h2>
+                                <h2>Upcoming Bithday <asp:Label ID="Label5" runat="server" Text="" /></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
                                     <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -262,7 +262,7 @@
                     <div class="row-fluid sortable">
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>Favortie bday</h2>
+                                <h2>Favortie bday <asp:Label ID="Label6" runat="server" Text="" /></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
                                     <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -310,7 +310,7 @@
 
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>Single</h2>
+                                <h2>Single <asp:Label ID="Label2" runat="server" Text="" /></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
                                     <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -359,7 +359,7 @@
                     <div class="row-fluid sortable">
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>It's complicated</h2>
+                                <h2>It's complicated <asp:Label ID="Label3" runat="server" Text="" /></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
                                     <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -405,7 +405,7 @@
 
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>Married</h2>
+                                <h2>Married <asp:Label ID="Label4" runat="server" Text="" /></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
                                     <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -454,7 +454,7 @@
                     <div class="row-fluid sortable">
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>In a relationship</h2>
+                                <h2>In a relationship <asp:Label ID="Label7" runat="server" Text="" /></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
                                     <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -500,7 +500,7 @@
 
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>Engaged</h2>
+                                <h2>Engaged <asp:Label ID="Label8" runat="server" Text="" /></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
                                     <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -549,7 +549,7 @@
                     <div class="row-fluid sortable">
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>In an open relationship</h2>
+                                <h2>In an open relationship <asp:Label ID="Label9" runat="server" Text="" /></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
                                     <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -595,7 +595,7 @@
 
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>Separated</h2>
+                                <h2>Separated <asp:Label ID="Label10" runat="server" Text="" /></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
                                     <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -644,7 +644,7 @@
                     <div class="row-fluid sortable">
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>Divorced</h2>
+                                <h2>Divorced <asp:Label ID="Label11" runat="server" Text="" /></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
                                     <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -690,7 +690,7 @@
 
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>Widowed</h2>
+                                <h2>Widowed <asp:Label ID="Label12" runat="server" Text="" /></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
                                     <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>

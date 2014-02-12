@@ -190,6 +190,7 @@ namespace birthdaybumps
                         where widowed.relationship_status == "Widowed"
                         orderby widowed.name
                         select widowed;
+            Label12.Text = "(" + query.Count().ToString() + ")";
             DataTable tb = FacebookHeper.ToDataTable<Datum>(query.ToList());
             GridView12.DataSource = tb;
             GridView12.DataBind();
@@ -201,6 +202,7 @@ namespace birthdaybumps
                         where divorced.relationship_status == "Divorced"
                         orderby divorced.name
                         select divorced;
+            Label11.Text = "(" + query.Count().ToString() + ")";
             DataTable tb = FacebookHeper.ToDataTable<Datum>(query.ToList());
             GridView11.DataSource = tb;
             GridView11.DataBind();
@@ -212,6 +214,7 @@ namespace birthdaybumps
                         where separated.relationship_status == "Separated"
                         orderby separated.name
                         select separated;
+            Label10.Text = "(" + query.Count().ToString() + ")";
             DataTable tb = FacebookHeper.ToDataTable<Datum>(query.ToList());
             GridView10.DataSource = tb;
             GridView10.DataBind();
@@ -223,6 +226,7 @@ namespace birthdaybumps
                         where open.relationship_status == "In an open relationship"
                         orderby open.name
                         select open;
+            Label9.Text = "(" + query.Count().ToString() + ")";
             DataTable tb = FacebookHeper.ToDataTable<Datum>(query.ToList());
             GridView9.DataSource = tb;
             GridView9.DataBind();
@@ -234,6 +238,7 @@ namespace birthdaybumps
                         where engaged.relationship_status == "Engaged"
                         orderby engaged.name
                         select engaged;
+            Label8.Text = "(" + query.Count().ToString() + ")";
             DataTable tb = FacebookHeper.ToDataTable<Datum>(query.ToList());
             GridView8.DataSource = tb;
             GridView8.DataBind();
@@ -245,6 +250,7 @@ namespace birthdaybumps
                         where relationship.relationship_status == "In a relationship"
                         orderby relationship.name
                         select relationship;
+            Label7.Text = "(" + query.Count().ToString() + ")";
             DataTable tb = FacebookHeper.ToDataTable<Datum>(query.ToList());
             GridView7.DataSource = tb;
             GridView7.DataBind();
@@ -257,6 +263,7 @@ namespace birthdaybumps
                                        && DateTime.Parse(bday.birthday).Month == DateTime.Now.Month)
                         orderby bday.name
                         select bday;
+            Label6.Text = "(" + query.Count().ToString() + ")";
             DataTable tb = FacebookHeper.ToDataTable<Datum2>(query.ToList());
             GridView6.DataSource = tb;
             GridView6.DataBind();
@@ -268,6 +275,7 @@ namespace birthdaybumps
                         where (!string.IsNullOrEmpty(upcomingBDay.birthday) && DateTime.Parse(upcomingBDay.birthday).Month >= DateTime.Now.Month)
                         orderby upcomingBDay.name
                         select upcomingBDay;
+            Label5.Text = "(" + query.Count().ToString() + ")";
             DataTable tb = FacebookHeper.ToDataTable<Datum>(query.ToList());
             GridView5.DataSource = tb;
             GridView5.DataBind();
@@ -279,6 +287,7 @@ namespace birthdaybumps
                         where married.relationship_status == "Married"
                         orderby married.name
                         select married;
+            Label4.Text = "(" + query.Count().ToString() + ")";
             DataTable tb = FacebookHeper.ToDataTable<Datum>(query.ToList());
             GridView4.DataSource = tb;
             GridView4.DataBind();
@@ -290,6 +299,7 @@ namespace birthdaybumps
                         where complicated.relationship_status == "It's complicated"
                         orderby complicated.name
                         select complicated;
+            Label3.Text = "(" + query.Count().ToString() + ")";
             DataTable tb = FacebookHeper.ToDataTable<Datum>(query.ToList());
             GridView3.DataSource = tb;
             GridView3.DataBind();
@@ -301,6 +311,7 @@ namespace birthdaybumps
                         where single.relationship_status == "Single"
                         orderby single.name
                         select single;
+            Label2.Text = "(" + query.Count().ToString() + ")";
             DataTable tb = FacebookHeper.ToDataTable<Datum>(query.ToList());
             GridView2.DataSource = tb;
             GridView2.DataBind();
@@ -313,6 +324,7 @@ namespace birthdaybumps
                                        && DateTime.Parse(bday.birthday).Month == DateTime.Now.Month)
                                        orderby bday.name
                                        select bday;
+            Label1.Text = "(" + query.Count().ToString() + ")";
             DataTable tb = FacebookHeper.ToDataTable<Datum>(query.ToList());
             GridView1.DataSource = tb;
 
