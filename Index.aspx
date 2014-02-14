@@ -59,6 +59,11 @@
         ga('send', 'pageview');
 
     </script>
+    <script type="text/javascript">
+        if (window.location.hash && window.location.hash == '#_=_') {
+            window.location.hash = '';
+        }
+    </script>
     <script type="text/javascript">var switchTo5x = true;</script>
     <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
     <script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
@@ -148,27 +153,27 @@
                     <!-- content starts -->
 
                     <div class="row-fluid">
-                            <div class="box span12">
-                                <div class="box-header well">
-                                    <h2><i class="icon-info-sign"></i>Featuring the all new - Birthday Bumps!</h2>
-                                    <div class="box-icon">
-                                        <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
-                                        <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
-                                        <a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
-                                    </div>
-                                </div>
-                                <div class="box-content">
-                                    <h1>Birthday Bumps <small> helps you find the B'Days of your favourite Facebook friends and their Relationship Status in a single click.</small></h1>
-                                    <p>Do you wanna know who will be your new Valentine this year ? What are you waitin for go and check it out!</p>
-
-                                    <p class="center">
-                                        <asp:Label ID="lblCode" runat="server" Text="" CssClass="label label-default" Visible="false"></asp:Label>
-                                        <%--<asp:Button ID="Button1" runat="server" Text="Login to Facebook" OnClick="Button1_Click" CssClass="btn btn-primary btn-primary" />--%>
-                                    </p>
-                                    <div class="clearfix"></div>
+                        <div class="box span12">
+                            <div class="box-header well">
+                                <h2><i class="icon-info-sign"></i>Featuring the all new - Birthday Bumps!</h2>
+                                <div class="box-icon">
+                                    <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+                                    <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+                                    <a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
                                 </div>
                             </div>
+                            <div class="box-content">
+                                <h1>Birthday Bumps <small>helps you find the B'Days of your favourite Facebook friends and their Relationship Status in a single click.</small></h1>
+                                <p>Do you wanna know who will be your new Valentine this year ? What are you waitin for go and check it out!</p>
+
+                                <p class="center">
+                                    <asp:Label ID="lblCode" runat="server" Text="" CssClass="label label-default" Visible="false"></asp:Label>
+                                    <%--<asp:Button ID="Button1" runat="server" Text="Login to Facebook" OnClick="Button1_Click" CssClass="btn btn-primary btn-primary" />--%>
+                                </p>
+                                <div class="clearfix"></div>
+                            </div>
                         </div>
+                    </div>
 
                     <div class="row-fluid sortable">
 
@@ -762,19 +767,19 @@
             <hr>
 
             <div class="modal hide fade" id="myModal">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">×</button>
-                        <h3>Settings</h3>
-                    </div>
-                    <div class="modal-body">
-                        <p>Ah! I know you are looking for some interesting features right here. </p>
-                        <p>No worries and wait for the forthcoming releases!</p>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="#" class="btn" data-dismiss="modal">Close</a>
-                        <a href="#" class="btn btn-primary" data-dismiss="modal">Ok! I Wait and See</a>
-                    </div>
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h3>Settings</h3>
                 </div>
+                <div class="modal-body">
+                    <p>Ah! I know you are looking for some interesting features right here. </p>
+                    <p>No worries and wait for the forthcoming releases!</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn" data-dismiss="modal">Close</a>
+                    <a href="#" class="btn btn-primary" data-dismiss="modal">Ok! I Wait and See</a>
+                </div>
+            </div>
 
             <footer>
                 <p class="pull-left">&copy; <a href="https://www.facebook.com/arun.antony.9655" target="_blank">Arun Antony</a> 2014</p>
