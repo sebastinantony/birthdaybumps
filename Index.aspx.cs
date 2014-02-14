@@ -67,7 +67,7 @@ namespace birthdaybumps
 
                     result(jsonOutput);
                     Session["jsonOutput"] = jsonOutput;
-                    Response.Redirect(Request.Url.DnsSafeHost + Request.Url.AbsolutePath);
+                    Response.Redirect(@"https://birthdaybumps.apphb.com/Index.aspx");
 
                     BindGV();
                 }
