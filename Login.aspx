@@ -7,7 +7,8 @@
     <meta charset="utf-8">
     <title>BirthdayBumps</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Find your fiends birthday and report of their Relationship Status">
+    <meta name="description" content="Find the B'Days of your favourite Facebook friends and their Relationship Status in a single click.
+Do you wanna know who will be your new Valentine this year ? What are you waitin for go and check it out!">
     <meta name="author" content="Arun Antony">
 
     <!-- The styles -->
