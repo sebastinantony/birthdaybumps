@@ -216,7 +216,7 @@
 
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>Upcoming Bithday
+                                <h2>Upcoming Birthday(s)
                                     <asp:Label ID="Label5" runat="server" Text="" /></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
@@ -268,7 +268,7 @@
                     <div class="row-fluid sortable">
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>Favortie bday
+                                <h2>Favourite Birthday(s)
                                     <asp:Label ID="Label6" runat="server" Text="" /></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
@@ -367,7 +367,7 @@
                     <div class="row-fluid sortable">
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>It's complicated
+                                <h2>It's Complicated
                                     <asp:Label ID="Label3" runat="server" Text="" /></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
@@ -464,7 +464,7 @@
                     <div class="row-fluid sortable">
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>In a relationship
+                                <h2>In a Relationship
                                     <asp:Label ID="Label7" runat="server" Text="" /></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
@@ -561,7 +561,7 @@
                     <div class="row-fluid sortable">
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>In an open relationship
+                                <h2>In an Open Relationship
                                     <asp:Label ID="Label9" runat="server" Text="" /></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
