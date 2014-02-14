@@ -284,6 +284,7 @@
                     'whatsnext': {},
                     'recommended': {}
                 });
+                addthis.toolbox('#addthis_buttons', {}, { 'url': 'https://birthdaybumps.apphb.com' });
             </script>
             <!-- AddThis Smart Layers END -->
 
