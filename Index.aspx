@@ -59,6 +59,9 @@
         ga('send', 'pageview');
 
     </script>
+    <script type="text/javascript">var switchTo5x = true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -155,9 +158,8 @@
                                 </div>
                             </div>
                             <div class="box-content">
-                                <h1>Birthday Bumps <small>Find your fiends birthday and report of their Relationship Status </small></h1>
+                                <h1>Birthday Bumps <small>Find your Facebook friends birthday and report of their Relationship Status, Propose your Valentine accordingly. </small></h1>
                                 <p>Its just for fun enjoy :)</p>
-                                <p><b>All pages in the menu are functional, take a look at all, please share this with your followers.</b></p>
 
                                 <p class="center">
                                     <asp:Label ID="lblCode" runat="server" Text="" CssClass="label label-default" Visible="false"></asp:Label>
@@ -843,10 +845,21 @@
         <!-- application script for Charisma demo -->
         <script src="js/charisma.js"></script>
 
-
-
-
-
+      <!-- AddThis Smart Layers BEGIN -->
+<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52fb22592ad11826"></script>
+<script type="text/javascript">
+    addthis.layers({
+        'theme': 'transparent',
+        'share': {
+            'position': 'right',
+            'numPreferredServices': 5
+        },
+        'whatsnext': {},
+        'recommended': {}
+    });
+</script>
+<!-- AddThis Smart Layers END -->
 
 
 
