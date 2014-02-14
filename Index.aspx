@@ -163,7 +163,7 @@
                                 </div>
                             </div>
                             <div class="box-content">
-                                <h1>Birthday Bumps <small>helps you find the B'Days of your favourite Facebook friends and their Relationship Status in a single click.</small></h1>
+                                <h1>Birthday Bumps <small>helps you to find the B'Days of your favourite Facebook friends and their Relationship Status in a single click.</small></h1>
                                 <p>Do you wanna know who will be your new Valentine this year ? What are you waitin for go and check it out!</p>
 
                                 <p class="center">
@@ -777,7 +777,7 @@
                 </div>
                 <div class="modal-footer">
                     <a href="#" class="btn" data-dismiss="modal">Close</a>
-                    <a href="#" class="btn btn-primary" data-dismiss="modal">Ok! I Wait and See</a>
+                    <a href="#" class="btn btn-primary" data-dismiss="modal">I'll Wait and See!</a>
                 </div>
             </div>
 
