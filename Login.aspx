@@ -79,10 +79,10 @@
 
                         <!-- theme selector starts -->
                         <div class="btn-group pull-right theme-container">
-                            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                            <%--<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
                                 <i class="icon-tint"></i><span class="hidden-phone">Change Theme / Skin</span>
                                 <span class="caret"></span>
-                            </a>
+                            </a>--%>
                             <ul class="dropdown-menu" id="themes">
                                 <li><a data-value="classic" href="#"><i class="icon-blank"></i>Classic</a></li>
                                 <li><a data-value="cerulean" href="#"><i class="icon-blank"></i>Cerulean</a></li>
@@ -147,7 +147,7 @@
                         <div class="row-fluid">
                             <div class="box span12">
                                 <div class="box-header well">
-                                    <h2><i class="icon-info-sign"></i>Introduction</h2>
+                                    <h2><i class="icon-info-sign"></i>Featuring the all new - Birthday Bumps!</h2>
                                     <div class="box-icon">
                                         <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
                                         <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -155,12 +155,12 @@
                                     </div>
                                 </div>
                                 <div class="box-content">
-                                    <h1>Birthday Bumps <small>Find your Facebook friends birthday and report of their Relationship Status, Propose your Valentine accordingly </small></h1>
-                                    <p>Its just for fun enjoy :)</p>
+                                    <h1>Birthday Bumps <small> helps you find the B'Days of your favourite Facebook friends and their Relationship Status in a single click.</small></h1>
+                                    <p>Do you wanna know who will be your new Valentine this year ? What are you waitin for go and check it out!</p>
 
                                     <p class="center">
                                         <asp:Label ID="lblCode" runat="server" Text="" CssClass="label label-default" Visible="false"></asp:Label>
-                                        <asp:Button ID="Button1" runat="server" Text="Get Friends Birthday Dates" OnClick="Button1_Click" CssClass="btn btn-primary btn-primary" />
+                                        <asp:Button ID="Button1" runat="server" Text="Login to Facebook" OnClick="Button1_Click" CssClass="btn btn-primary btn-primary" />
                                     </p>
                                     <div class="clearfix"></div>
                                 </div>
@@ -180,11 +180,12 @@
                         <h3>Settings</h3>
                     </div>
                     <div class="modal-body">
-                        <p>Here settings can be configured...</p>
+                        <p>Ah! I know you are looking for some interesting features right here. </p>
+                        <p>No worries and wait for the forthcoming releases!</p>
                     </div>
                     <div class="modal-footer">
                         <a href="#" class="btn" data-dismiss="modal">Close</a>
-                        <a href="#" class="btn btn-primary">Save changes</a>
+                        <a href="#" class="btn btn-primary" data-dismiss="modal">Ok! I Wait and See</a>
                     </div>
                 </div>
 
@@ -270,21 +271,21 @@
             <!-- application script for Charisma demo -->
             <script src="js/charisma.js"></script>
 
-           <!-- AddThis Smart Layers BEGIN -->
-<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52fb22592ad11826"></script>
-<script type="text/javascript">
-    addthis.layers({
-        'theme': 'transparent',
-        'share': {
-            'position': 'right',
-            'numPreferredServices': 5
-        },
-        'whatsnext': {},
-        'recommended': {}
-    });
-</script>
-<!-- AddThis Smart Layers END -->
+            <!-- AddThis Smart Layers BEGIN -->
+            <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52fb22592ad11826"></script>
+            <script type="text/javascript">
+                addthis.layers({
+                    'theme': 'transparent',
+                    'share': {
+                        'position': 'right',
+                        'numPreferredServices': 5
+                    },
+                    'whatsnext': {},
+                    'recommended': {}
+                });
+            </script>
+            <!-- AddThis Smart Layers END -->
 
 
 

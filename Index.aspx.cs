@@ -22,7 +22,7 @@ namespace birthdaybumps
         {
             if (!IsPostBack)
             {
-                if (string.IsNullOrEmpty(Request.QueryString["code"]))
+                if (string.IsNullOrEmpty(Request.QueryString["code"]) && Session["access_token"] == null)
                 {
 
                     Facebook fb = new Facebook(ConfigurationSettings.AppSettings["FacebookClientID"].ToString(),
@@ -31,7 +31,7 @@ namespace birthdaybumps
 
                     Response.Redirect(fb.FinalSignInUrl);
                 }
-                else
+                else if (Session["access_token"] == null)
                 {
                     lblCode.Text = Request.QueryString["code"].ToString();
                     WebHeaderCollection collection = new WebHeaderCollection();
@@ -69,6 +69,15 @@ namespace birthdaybumps
                     Session["jsonOutput"] = jsonOutput;
 
                     BindGV();
+                }
+                else if (Session["access_token"] != null)
+                {
+                    if (Session["jsonOutput"] != null)
+                    {
+                        result(Session["jsonOutput"].ToString());
+
+                        BindGV();
+                    }
                 }
             }
         }

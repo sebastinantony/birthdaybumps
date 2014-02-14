@@ -60,8 +60,8 @@
 
     </script>
     <script type="text/javascript">var switchTo5x = true;</script>
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -82,10 +82,10 @@
 
                     <!-- theme selector starts -->
                     <div class="btn-group pull-right theme-container">
-                        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                        <%--<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
                             <i class="icon-tint"></i><span class="hidden-phone">Change Theme / Skin</span>
                             <span class="caret"></span>
-                        </a>
+                        </a>--%>
                         <ul class="dropdown-menu" id="themes">
                             <li><a data-value="classic" href="#"><i class="icon-blank"></i>Classic</a></li>
                             <li><a data-value="cerulean" href="#"><i class="icon-blank"></i>Cerulean</a></li>
@@ -148,33 +148,34 @@
                     <!-- content starts -->
 
                     <div class="row-fluid">
-                        <div class="box span12">
-                            <div class="box-header well">
-                                <h2><i class="icon-info-sign"></i>Introduction</h2>
-                                <div class="box-icon">
-                                    <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
-                                    <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
-                                    <a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+                            <div class="box span12">
+                                <div class="box-header well">
+                                    <h2><i class="icon-info-sign"></i>Featuring the all new - Birthday Bumps!</h2>
+                                    <div class="box-icon">
+                                        <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+                                        <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+                                        <a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+                                    </div>
+                                </div>
+                                <div class="box-content">
+                                    <h1>Birthday Bumps <small> helps you find the B'Days of your favourite Facebook friends and their Relationship Status in a single click.</small></h1>
+                                    <p>Do you wanna know who will be your new Valentine this year ? What are you waitin for go and check it out!</p>
+
+                                    <p class="center">
+                                        <asp:Label ID="lblCode" runat="server" Text="" CssClass="label label-default" Visible="false"></asp:Label>
+                                        <%--<asp:Button ID="Button1" runat="server" Text="Login to Facebook" OnClick="Button1_Click" CssClass="btn btn-primary btn-primary" />--%>
+                                    </p>
+                                    <div class="clearfix"></div>
                                 </div>
                             </div>
-                            <div class="box-content">
-                                <h1>Birthday Bumps <small>Find your Facebook friends birthday and report of their Relationship Status, Propose your Valentine accordingly. </small></h1>
-                                <p>Its just for fun enjoy :)</p>
-
-                                <p class="center">
-                                    <asp:Label ID="lblCode" runat="server" Text="" CssClass="label label-default" Visible="false"></asp:Label>
-                                    <%--<asp:Button ID="btnFBFriends" runat="server" Text="Button" OnClick="btnFBFriends_Click" />--%>
-                                </p>
-                                <div class="clearfix"></div>
-                            </div>
                         </div>
-                    </div>
 
                     <div class="row-fluid sortable">
 
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>Today's Birthday <asp:Label ID="Label1" runat="server" Text="" /></asp:Label></h2>
+                                <h2>Today's Birthday
+                                    <asp:Label ID="Label1" runat="server" Text="" /></asp:Label></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
                                     <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -184,28 +185,28 @@
                             <div class="box-content">
                                 <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
                                 <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Always">
-                                <ContentTemplate>
-                                <asp:GridView ID="GridView1" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
-                                    AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView1_PageIndexChanging"
-                                    GridLines="None">
-                                    <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
-                                    <Columns>
+                                    <ContentTemplate>
+                                        <asp:GridView ID="GridView1" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
+                                            AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView1_PageIndexChanging"
+                                            GridLines="None">
+                                            <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
+                                            <Columns>
 
-                                        <asp:TemplateField>
-                                            <ItemTemplate>
-                                                <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
-                                            </ItemTemplate>
-                                        </asp:TemplateField>
+                                                <asp:TemplateField>
+                                                    <ItemTemplate>
+                                                        <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
 
-                                        <asp:BoundField DataField="name" HeaderText="Name" />
-                                        <asp:BoundField DataField="birthday" HeaderText="Birthday" />
-                                        <asp:BoundField DataField="relationship_status" HeaderText="Status" />
-                                    </Columns>
+                                                <asp:BoundField DataField="name" HeaderText="Name" />
+                                                <asp:BoundField DataField="birthday" HeaderText="Birthday" />
+                                                <asp:BoundField DataField="relationship_status" HeaderText="Status" />
+                                            </Columns>
 
-                                    <RowStyle CssClass="success"></RowStyle>
-                                </asp:GridView>
-                                    </ContentTemplate>                                
-                                    </asp:UpdatePanel>
+                                            <RowStyle CssClass="success"></RowStyle>
+                                        </asp:GridView>
+                                    </ContentTemplate>
+                                </asp:UpdatePanel>
 
                             </div>
                         </div>
@@ -213,7 +214,8 @@
 
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>Upcoming Bithday <asp:Label ID="Label5" runat="server" Text="" /></h2>
+                                <h2>Upcoming Bithday
+                                    <asp:Label ID="Label5" runat="server" Text="" /></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
                                     <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -222,28 +224,28 @@
                             </div>
                             <div class="box-content">
                                 <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Always">
-                                <ContentTemplate>                                     
-                                <asp:GridView ID="GridView5" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
-                                    AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView5_PageIndexChanging"
-                                    GridLines="None">
-                                    <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
-                                    <Columns>
+                                    <ContentTemplate>
+                                        <asp:GridView ID="GridView5" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
+                                            AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView5_PageIndexChanging"
+                                            GridLines="None">
+                                            <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
+                                            <Columns>
 
-                                        <asp:TemplateField>
-                                            <ItemTemplate>
-                                                <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
-                                            </ItemTemplate>
-                                        </asp:TemplateField>
+                                                <asp:TemplateField>
+                                                    <ItemTemplate>
+                                                        <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
 
-                                        <asp:BoundField DataField="name" HeaderText="Name" />
-                                        <asp:BoundField DataField="birthday" HeaderText="Birthday" />
-                                        <asp:BoundField DataField="relationship_status" HeaderText="Status" />
-                                    </Columns>
+                                                <asp:BoundField DataField="name" HeaderText="Name" />
+                                                <asp:BoundField DataField="birthday" HeaderText="Birthday" />
+                                                <asp:BoundField DataField="relationship_status" HeaderText="Status" />
+                                            </Columns>
 
-                                    <RowStyle CssClass="success"></RowStyle>
-                                </asp:GridView>
+                                            <RowStyle CssClass="success"></RowStyle>
+                                        </asp:GridView>
                                     </ContentTemplate>
-                                    </asp:UpdatePanel>
+                                </asp:UpdatePanel>
                                 <%--<div class="pagination pagination-centered">
                                     <ul>
                                         <li><a href="#">Prev</a></li>
@@ -264,7 +266,8 @@
                     <div class="row-fluid sortable">
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>Favortie bday <asp:Label ID="Label6" runat="server" Text="" /></h2>
+                                <h2>Favortie bday
+                                    <asp:Label ID="Label6" runat="server" Text="" /></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
                                     <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -273,28 +276,28 @@
                             </div>
                             <div class="box-content">
                                 <asp:UpdatePanel ID="UpdatePanel3" runat="server" UpdateMode="Always">
-                                <ContentTemplate> 
-                                <asp:GridView ID="GridView6" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
-                                    AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView6_PageIndexChanging"
-                                    GridLines="None">
-                                    <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
-                                    <Columns>
+                                    <ContentTemplate>
+                                        <asp:GridView ID="GridView6" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
+                                            AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView6_PageIndexChanging"
+                                            GridLines="None">
+                                            <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
+                                            <Columns>
 
-                                        <asp:TemplateField>
-                                            <ItemTemplate>
-                                                <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
-                                            </ItemTemplate>
-                                        </asp:TemplateField>
+                                                <asp:TemplateField>
+                                                    <ItemTemplate>
+                                                        <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
 
-                                        <asp:BoundField DataField="name" HeaderText="Name" />
-                                        <asp:BoundField DataField="birthday" HeaderText="Birthday" />
-                                        <asp:BoundField DataField="relationship_status" HeaderText="Status" />
-                                    </Columns>
+                                                <asp:BoundField DataField="name" HeaderText="Name" />
+                                                <asp:BoundField DataField="birthday" HeaderText="Birthday" />
+                                                <asp:BoundField DataField="relationship_status" HeaderText="Status" />
+                                            </Columns>
 
-                                    <RowStyle CssClass="success"></RowStyle>
-                                </asp:GridView>
+                                            <RowStyle CssClass="success"></RowStyle>
+                                        </asp:GridView>
                                     </ContentTemplate>
-                                    </asp:UpdatePanel>
+                                </asp:UpdatePanel>
                                 <%--<div class="pagination pagination-centered">
                                     <ul>
                                         <li><a href="#">Prev</a></li>
@@ -312,7 +315,8 @@
 
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>Single <asp:Label ID="Label2" runat="server" Text="" /></h2>
+                                <h2>Single
+                                    <asp:Label ID="Label2" runat="server" Text="" /></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
                                     <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -321,26 +325,26 @@
                             </div>
                             <div class="box-content">
                                 <asp:UpdatePanel ID="UpdatePanel4" runat="server" UpdateMode="Always">
-                                <ContentTemplate> 
-                                <asp:GridView ID="GridView2" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
-                                    AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView2_PageIndexChanging"
-                                    GridLines="None">
-                                    <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
-                                    <Columns>
-                                        <asp:TemplateField>
-                                            <ItemTemplate>
-                                                <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
-                                            </ItemTemplate>
-                                        </asp:TemplateField>
-                                        <asp:BoundField DataField="name" HeaderText="Name" />
-                                        <asp:BoundField DataField="birthday" HeaderText="Birthday" />
-                                        <asp:BoundField DataField="relationship_status" HeaderText="Status" />
-                                    </Columns>
+                                    <ContentTemplate>
+                                        <asp:GridView ID="GridView2" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
+                                            AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView2_PageIndexChanging"
+                                            GridLines="None">
+                                            <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
+                                            <Columns>
+                                                <asp:TemplateField>
+                                                    <ItemTemplate>
+                                                        <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:BoundField DataField="name" HeaderText="Name" />
+                                                <asp:BoundField DataField="birthday" HeaderText="Birthday" />
+                                                <asp:BoundField DataField="relationship_status" HeaderText="Status" />
+                                            </Columns>
 
-                                    <RowStyle CssClass="success"></RowStyle>
-                                </asp:GridView>
+                                            <RowStyle CssClass="success"></RowStyle>
+                                        </asp:GridView>
                                     </ContentTemplate>
-                                    </asp:UpdatePanel>
+                                </asp:UpdatePanel>
                                 <%--<div class="pagination pagination-centered">
                                     <ul>
                                         <li><a href="#">Prev</a></li>
@@ -361,7 +365,8 @@
                     <div class="row-fluid sortable">
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>It's complicated <asp:Label ID="Label3" runat="server" Text="" /></h2>
+                                <h2>It's complicated
+                                    <asp:Label ID="Label3" runat="server" Text="" /></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
                                     <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -370,26 +375,26 @@
                             </div>
                             <div class="box-content">
                                 <asp:UpdatePanel ID="UpdatePanel5" runat="server" UpdateMode="Always">
-                                <ContentTemplate> 
-                                <asp:GridView ID="GridView3" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
-                                    AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView3_PageIndexChanging"
-                                    GridLines="None">
-                                    <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
-                                    <Columns>
-                                        <asp:TemplateField>
-                                            <ItemTemplate>
-                                                <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
-                                            </ItemTemplate>
-                                        </asp:TemplateField>
-                                        <asp:BoundField DataField="name" HeaderText="Name" />
-                                        <asp:BoundField DataField="birthday" HeaderText="Birthday" />
-                                        <asp:BoundField DataField="relationship_status" HeaderText="Status" />
-                                    </Columns>
+                                    <ContentTemplate>
+                                        <asp:GridView ID="GridView3" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
+                                            AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView3_PageIndexChanging"
+                                            GridLines="None">
+                                            <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
+                                            <Columns>
+                                                <asp:TemplateField>
+                                                    <ItemTemplate>
+                                                        <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:BoundField DataField="name" HeaderText="Name" />
+                                                <asp:BoundField DataField="birthday" HeaderText="Birthday" />
+                                                <asp:BoundField DataField="relationship_status" HeaderText="Status" />
+                                            </Columns>
 
-                                    <RowStyle CssClass="success"></RowStyle>
-                                </asp:GridView>
+                                            <RowStyle CssClass="success"></RowStyle>
+                                        </asp:GridView>
                                     </ContentTemplate>
-                                    </asp:UpdatePanel>
+                                </asp:UpdatePanel>
                                 <%--<div class="pagination pagination-centered">
                                     <ul>
                                         <li><a href="#">Prev</a></li>
@@ -407,7 +412,8 @@
 
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>Married <asp:Label ID="Label4" runat="server" Text="" /></h2>
+                                <h2>Married
+                                    <asp:Label ID="Label4" runat="server" Text="" /></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
                                     <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -416,26 +422,26 @@
                             </div>
                             <div class="box-content">
                                 <asp:UpdatePanel ID="UpdatePanel6" runat="server" UpdateMode="Always">
-                                <ContentTemplate> 
-                                <asp:GridView ID="GridView4" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
-                                    AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView4_PageIndexChanging"
-                                    AutoGenerateColumns="false" GridLines="None">
-                                    <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
-                                    <Columns>
-                                        <asp:TemplateField>
-                                            <ItemTemplate>
-                                                <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
-                                            </ItemTemplate>
-                                        </asp:TemplateField>
-                                        <asp:BoundField DataField="name" HeaderText="Name" />
-                                        <asp:BoundField DataField="birthday" HeaderText="Birthday" />
-                                        <asp:BoundField DataField="relationship_status" HeaderText="Status" />
-                                    </Columns>
+                                    <ContentTemplate>
+                                        <asp:GridView ID="GridView4" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
+                                            AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView4_PageIndexChanging"
+                                            AutoGenerateColumns="false" GridLines="None">
+                                            <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
+                                            <Columns>
+                                                <asp:TemplateField>
+                                                    <ItemTemplate>
+                                                        <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:BoundField DataField="name" HeaderText="Name" />
+                                                <asp:BoundField DataField="birthday" HeaderText="Birthday" />
+                                                <asp:BoundField DataField="relationship_status" HeaderText="Status" />
+                                            </Columns>
 
-                                    <RowStyle CssClass="success"></RowStyle>
-                                </asp:GridView>
+                                            <RowStyle CssClass="success"></RowStyle>
+                                        </asp:GridView>
                                     </ContentTemplate>
-                                    </asp:UpdatePanel>
+                                </asp:UpdatePanel>
                                 <%--<div class="pagination pagination-centered">
                                     <ul>
                                         <li><a href="#">Prev</a></li>
@@ -456,7 +462,8 @@
                     <div class="row-fluid sortable">
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>In a relationship <asp:Label ID="Label7" runat="server" Text="" /></h2>
+                                <h2>In a relationship
+                                    <asp:Label ID="Label7" runat="server" Text="" /></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
                                     <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -464,27 +471,27 @@
                                 </div>
                             </div>
                             <div class="box-content">
-                               <asp:UpdatePanel ID="UpdatePanel7" runat="server" UpdateMode="Always">
-                                <ContentTemplate> 
-                                <asp:GridView ID="GridView7" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
-                                    AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView7_PageIndexChanging"
-                                    GridLines="None">
-                                    <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
-                                    <Columns>
-                                        <asp:TemplateField>
-                                            <ItemTemplate>
-                                                <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
-                                            </ItemTemplate>
-                                        </asp:TemplateField>
-                                        <asp:BoundField DataField="name" HeaderText="Name" />
-                                        <asp:BoundField DataField="birthday" HeaderText="Birthday" />
-                                        <asp:BoundField DataField="relationship_status" HeaderText="Status" />
-                                    </Columns>
+                                <asp:UpdatePanel ID="UpdatePanel7" runat="server" UpdateMode="Always">
+                                    <ContentTemplate>
+                                        <asp:GridView ID="GridView7" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
+                                            AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView7_PageIndexChanging"
+                                            GridLines="None">
+                                            <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
+                                            <Columns>
+                                                <asp:TemplateField>
+                                                    <ItemTemplate>
+                                                        <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:BoundField DataField="name" HeaderText="Name" />
+                                                <asp:BoundField DataField="birthday" HeaderText="Birthday" />
+                                                <asp:BoundField DataField="relationship_status" HeaderText="Status" />
+                                            </Columns>
 
-                                    <RowStyle CssClass="success"></RowStyle>
-                                </asp:GridView>
+                                            <RowStyle CssClass="success"></RowStyle>
+                                        </asp:GridView>
                                     </ContentTemplate>
-                                   </asp:UpdatePanel>
+                                </asp:UpdatePanel>
                                 <%--<div class="pagination pagination-centered">
                                     <ul>
                                         <li><a href="#">Prev</a></li>
@@ -502,7 +509,8 @@
 
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>Engaged <asp:Label ID="Label8" runat="server" Text="" /></h2>
+                                <h2>Engaged
+                                    <asp:Label ID="Label8" runat="server" Text="" /></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
                                     <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -511,26 +519,26 @@
                             </div>
                             <div class="box-content">
                                 <asp:UpdatePanel ID="UpdatePanel8" runat="server" UpdateMode="Always">
-                                <ContentTemplate> 
-                                <asp:GridView ID="GridView8" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
-                                    AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView8_PageIndexChanging"
-                                    AutoGenerateColumns="false" GridLines="None">
-                                    <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
-                                    <Columns>
-                                        <asp:TemplateField>
-                                            <ItemTemplate>
-                                                <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
-                                            </ItemTemplate>
-                                        </asp:TemplateField>
-                                        <asp:BoundField DataField="name" HeaderText="Name" />
-                                        <asp:BoundField DataField="birthday" HeaderText="Birthday" />
-                                        <asp:BoundField DataField="relationship_status" HeaderText="Status" />
-                                    </Columns>
+                                    <ContentTemplate>
+                                        <asp:GridView ID="GridView8" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
+                                            AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView8_PageIndexChanging"
+                                            AutoGenerateColumns="false" GridLines="None">
+                                            <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
+                                            <Columns>
+                                                <asp:TemplateField>
+                                                    <ItemTemplate>
+                                                        <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:BoundField DataField="name" HeaderText="Name" />
+                                                <asp:BoundField DataField="birthday" HeaderText="Birthday" />
+                                                <asp:BoundField DataField="relationship_status" HeaderText="Status" />
+                                            </Columns>
 
-                                    <RowStyle CssClass="success"></RowStyle>
-                                </asp:GridView>
+                                            <RowStyle CssClass="success"></RowStyle>
+                                        </asp:GridView>
                                     </ContentTemplate>
-                                    </asp:UpdatePanel>
+                                </asp:UpdatePanel>
                                 <%--<div class="pagination pagination-centered">
                                     <ul>
                                         <li><a href="#">Prev</a></li>
@@ -551,7 +559,8 @@
                     <div class="row-fluid sortable">
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>In an open relationship <asp:Label ID="Label9" runat="server" Text="" /></h2>
+                                <h2>In an open relationship
+                                    <asp:Label ID="Label9" runat="server" Text="" /></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
                                     <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -560,26 +569,26 @@
                             </div>
                             <div class="box-content">
                                 <asp:UpdatePanel ID="UpdatePanel9" runat="server" UpdateMode="Always">
-                                <ContentTemplate> 
-                                <asp:GridView ID="GridView9" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
-                                    AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView9_PageIndexChanging"
-                                    GridLines="None">
-                                    <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
-                                    <Columns>
-                                        <asp:TemplateField>
-                                            <ItemTemplate>
-                                                <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
-                                            </ItemTemplate>
-                                        </asp:TemplateField>
-                                        <asp:BoundField DataField="name" HeaderText="Name" />
-                                        <asp:BoundField DataField="birthday" HeaderText="Birthday" />
-                                        <asp:BoundField DataField="relationship_status" HeaderText="Status" />
-                                    </Columns>
+                                    <ContentTemplate>
+                                        <asp:GridView ID="GridView9" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
+                                            AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView9_PageIndexChanging"
+                                            GridLines="None">
+                                            <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
+                                            <Columns>
+                                                <asp:TemplateField>
+                                                    <ItemTemplate>
+                                                        <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:BoundField DataField="name" HeaderText="Name" />
+                                                <asp:BoundField DataField="birthday" HeaderText="Birthday" />
+                                                <asp:BoundField DataField="relationship_status" HeaderText="Status" />
+                                            </Columns>
 
-                                    <RowStyle CssClass="success"></RowStyle>
-                                </asp:GridView>
+                                            <RowStyle CssClass="success"></RowStyle>
+                                        </asp:GridView>
                                     </ContentTemplate>
-                                    </asp:UpdatePanel>
+                                </asp:UpdatePanel>
                                 <%--<div class="pagination pagination-centered">
                                     <ul>
                                         <li><a href="#">Prev</a></li>
@@ -597,7 +606,8 @@
 
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>Separated <asp:Label ID="Label10" runat="server" Text="" /></h2>
+                                <h2>Separated
+                                    <asp:Label ID="Label10" runat="server" Text="" /></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
                                     <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -606,26 +616,26 @@
                             </div>
                             <div class="box-content">
                                 <asp:UpdatePanel ID="UpdatePanel10" runat="server" UpdateMode="Always">
-                                <ContentTemplate> 
-                                <asp:GridView ID="GridView10" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
-                                    AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView10_PageIndexChanging"
-                                    AutoGenerateColumns="false" GridLines="None">
-                                    <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
-                                    <Columns>
-                                        <asp:TemplateField>
-                                            <ItemTemplate>
-                                                <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
-                                            </ItemTemplate>
-                                        </asp:TemplateField>
-                                        <asp:BoundField DataField="name" HeaderText="Name" />
-                                        <asp:BoundField DataField="birthday" HeaderText="Birthday" />
-                                        <asp:BoundField DataField="relationship_status" HeaderText="Status" />
-                                    </Columns>
+                                    <ContentTemplate>
+                                        <asp:GridView ID="GridView10" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
+                                            AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView10_PageIndexChanging"
+                                            AutoGenerateColumns="false" GridLines="None">
+                                            <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
+                                            <Columns>
+                                                <asp:TemplateField>
+                                                    <ItemTemplate>
+                                                        <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:BoundField DataField="name" HeaderText="Name" />
+                                                <asp:BoundField DataField="birthday" HeaderText="Birthday" />
+                                                <asp:BoundField DataField="relationship_status" HeaderText="Status" />
+                                            </Columns>
 
-                                    <RowStyle CssClass="success"></RowStyle>
-                                </asp:GridView>
+                                            <RowStyle CssClass="success"></RowStyle>
+                                        </asp:GridView>
                                     </ContentTemplate>
-                                    </asp:UpdatePanel>
+                                </asp:UpdatePanel>
                                 <%--<div class="pagination pagination-centered">
                                     <ul>
                                         <li><a href="#">Prev</a></li>
@@ -646,7 +656,8 @@
                     <div class="row-fluid sortable">
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>Divorced <asp:Label ID="Label11" runat="server" Text="" /></h2>
+                                <h2>Divorced
+                                    <asp:Label ID="Label11" runat="server" Text="" /></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
                                     <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -655,26 +666,26 @@
                             </div>
                             <div class="box-content">
                                 <asp:UpdatePanel ID="UpdatePanel11" runat="server" UpdateMode="Always">
-                                <ContentTemplate> 
-                                <asp:GridView ID="GridView11" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
-                                    AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView11_PageIndexChanging"
-                                    GridLines="None">
-                                    <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
-                                    <Columns>
-                                        <asp:TemplateField>
-                                            <ItemTemplate>
-                                                <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
-                                            </ItemTemplate>
-                                        </asp:TemplateField>
-                                        <asp:BoundField DataField="name" HeaderText="Name" />
-                                        <asp:BoundField DataField="birthday" HeaderText="Birthday" />
-                                        <asp:BoundField DataField="relationship_status" HeaderText="Status" />
-                                    </Columns>
+                                    <ContentTemplate>
+                                        <asp:GridView ID="GridView11" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
+                                            AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView11_PageIndexChanging"
+                                            GridLines="None">
+                                            <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
+                                            <Columns>
+                                                <asp:TemplateField>
+                                                    <ItemTemplate>
+                                                        <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:BoundField DataField="name" HeaderText="Name" />
+                                                <asp:BoundField DataField="birthday" HeaderText="Birthday" />
+                                                <asp:BoundField DataField="relationship_status" HeaderText="Status" />
+                                            </Columns>
 
-                                    <RowStyle CssClass="success"></RowStyle>
-                                </asp:GridView>
+                                            <RowStyle CssClass="success"></RowStyle>
+                                        </asp:GridView>
                                     </ContentTemplate>
-                                    </asp:UpdatePanel>
+                                </asp:UpdatePanel>
                                 <%--<div class="pagination pagination-centered">
                                     <ul>
                                         <li><a href="#">Prev</a></li>
@@ -692,7 +703,8 @@
 
                         <div class="box span6">
                             <div class="box-header well" data-original-title>
-                                <h2>Widowed <asp:Label ID="Label12" runat="server" Text="" /></h2>
+                                <h2>Widowed
+                                    <asp:Label ID="Label12" runat="server" Text="" /></h2>
                                 <div class="box-icon">
                                     <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
                                     <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -701,26 +713,26 @@
                             </div>
                             <div class="box-content">
                                 <asp:UpdatePanel ID="UpdatePanel12" runat="server" UpdateMode="Always">
-                                <ContentTemplate> 
-                                <asp:GridView ID="GridView12" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
-                                    AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView12_PageIndexChanging"
-                                    AutoGenerateColumns="false" GridLines="None">
-                                    <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
-                                    <Columns>
-                                        <asp:TemplateField>
-                                            <ItemTemplate>
-                                                <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
-                                            </ItemTemplate>
-                                        </asp:TemplateField>
-                                        <asp:BoundField DataField="name" HeaderText="Name" />
-                                        <asp:BoundField DataField="birthday" HeaderText="Birthday" />
-                                        <asp:BoundField DataField="relationship_status" HeaderText="Status" />
-                                    </Columns>
+                                    <ContentTemplate>
+                                        <asp:GridView ID="GridView12" runat="server" CssClass="table" AlternatingRowStyle-CssClass="active" RowStyle-CssClass="success"
+                                            AllowPaging="True" EmptyDataText="No Records Found" OnPageIndexChanging="GridView12_PageIndexChanging"
+                                            AutoGenerateColumns="false" GridLines="None">
+                                            <AlternatingRowStyle CssClass="active"></AlternatingRowStyle>
+                                            <Columns>
+                                                <asp:TemplateField>
+                                                    <ItemTemplate>
+                                                        <asp:Image ID="Image1" runat="server" ImageUrl='<%#DataBinder.Eval(Container.DataItem, "picture.data.url") %>' />
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:BoundField DataField="name" HeaderText="Name" />
+                                                <asp:BoundField DataField="birthday" HeaderText="Birthday" />
+                                                <asp:BoundField DataField="relationship_status" HeaderText="Status" />
+                                            </Columns>
 
-                                    <RowStyle CssClass="success"></RowStyle>
-                                </asp:GridView>
+                                            <RowStyle CssClass="success"></RowStyle>
+                                        </asp:GridView>
                                     </ContentTemplate>
-                                    </asp:UpdatePanel>
+                                </asp:UpdatePanel>
                                 <%--<div class="pagination pagination-centered">
                                     <ul>
                                         <li><a href="#">Prev</a></li>
@@ -750,18 +762,19 @@
             <hr>
 
             <div class="modal hide fade" id="myModal">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">×</button>
-                    <h3>Settings</h3>
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h3>Settings</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p>Ah! I know you are looking for some interesting features right here. </p>
+                        <p>No worries and wait for the forthcoming releases!</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn" data-dismiss="modal">Close</a>
+                        <a href="#" class="btn btn-primary" data-dismiss="modal">Ok! I Wait and See</a>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <p>Here settings can be configured...</p>
-                </div>
-                <div class="modal-footer">
-                    <a href="#" class="btn" data-dismiss="modal">Close</a>
-                    <a href="#" class="btn btn-primary">Save changes</a>
-                </div>
-            </div>
 
             <footer>
                 <p class="pull-left">&copy; <a href="https://www.facebook.com/arun.antony.9655" target="_blank">Arun Antony</a> 2014</p>
@@ -845,21 +858,21 @@
         <!-- application script for Charisma demo -->
         <script src="js/charisma.js"></script>
 
-      <!-- AddThis Smart Layers BEGIN -->
-<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52fb22592ad11826"></script>
-<script type="text/javascript">
-    addthis.layers({
-        'theme': 'transparent',
-        'share': {
-            'position': 'right',
-            'numPreferredServices': 5
-        },
-        'whatsnext': {},
-        'recommended': {}
-    });
-</script>
-<!-- AddThis Smart Layers END -->
+        <!-- AddThis Smart Layers BEGIN -->
+        <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52fb22592ad11826"></script>
+        <script type="text/javascript">
+            addthis.layers({
+                'theme': 'transparent',
+                'share': {
+                    'position': 'right',
+                    'numPreferredServices': 5
+                },
+                'whatsnext': {},
+                'recommended': {}
+            });
+        </script>
+        <!-- AddThis Smart Layers END -->
 
 
 
