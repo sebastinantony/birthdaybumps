@@ -67,7 +67,7 @@ namespace birthdaybumps
 
                     result(jsonOutput);
                     Session["jsonOutput"] = jsonOutput;
-                    Response.Redirect(ConfigurationSettings.AppSettings["redirect"]);
+                    Response.Redirect(Request.Url.AbsoluteUri.Split('?')[0]);
 
                     BindGV();
                 }
