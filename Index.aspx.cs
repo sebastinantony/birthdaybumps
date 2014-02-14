@@ -67,6 +67,7 @@ namespace birthdaybumps
 
                     result(jsonOutput);
                     Session["jsonOutput"] = jsonOutput;
+                    Response.Redirect(ConfigurationSettings.AppSettings["FacebookWebUrl"]);
 
                     BindGV();
                 }
